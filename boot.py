@@ -45,8 +45,8 @@ with open('test.bmp', 'rb') as bmp_file:
   bmp_file.seek(offset, 0)
 
    # read image data and transfer to oled
-  for y in range(1,height+1):
-    for x in range(0,width):
+  for y in range(0, height):
+    for x in range(0, width):
       blue = int.from_bytes(bmp_file.read(1), 'little')
       green =  int.from_bytes(bmp_file.read(1), 'little')
       red =  int.from_bytes(bmp_file.read(1), 'little')
